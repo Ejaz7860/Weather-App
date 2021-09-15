@@ -1,0 +1,251 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url('./Images/noaa-99F4mC79j1I-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Noto Sans HK', sans-serif;
+}
+
+
+.container{
+    width: 100%;
+    flex-direction: row;
+    height: 100vh;
+    position: absolute;
+    left: 0;right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .weather{
+    display: flex;
+    width: 800px;
+    height: 450px;
+    background: #fff;
+}
+
+.weather .content{
+    width: 500px;
+    height: 100%;
+}
+.content .inputBox{
+    position: relative;
+    top: 40px;
+    left:23%;
+    width: 300px;
+    box-sizing: border-box;
+    font-size: 20px;
+    transition: .5s;
+}
+
+
+input[type="text"]
+{
+    background: #201a20;
+    width: 200px;
+    height: 35px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    color: #fff;
+    border-radius: 25px 0 0 25px;
+
+}
+
+/* input[type="submit"] */
+.btn
+{
+    position: relative;
+    border-radius:  0 25px 25px 0 ; 
+    height: 35px;
+    left: -5px;
+    width: 70px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #ccc;
+
+}
+.btn .fa{
+  color: #FFF;
+}
+.btn:hover{
+    background:#0099FF ;
+}
+
+/* temp */
+.weather .content .temp{
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sunset{
+    display: flex;
+    align-items: center;
+}
+.sunset i{
+    margin-right: 5px;
+    color:#0099FF;
+    width: 30px;
+}
+.description{
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+
+}
+.description i{
+    font-size: 4.5rem;
+    color: #0099FF
+}
+.description h2{
+    margin-top: 10px;
+    font-size: 3rem;
+    font-weight: 500;
+}
+.description h4{
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+
+/* date and time */
+.weather .calender{
+  width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #10101E;
+}
+
+
+.datetime{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+  padding: 25px;
+  color: #fff;
+    /* position: relative;
+    text-align: center;
+    color: #fff;
+    height: 50%;
+    border-radius: 5px;
+    margin: 10px 10px;
+    padding-top: 40px; */
+}
+
+.calender .calenderImg{
+  height: 50%;
+}
+.calender .calenderImg img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.datetime:hover{
+    background: #0099FF;
+    box-shadow: 0 0 5px #0099FF;
+}
+.date{
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.time{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time span:last-child
+{
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 0 5px;
+    font-weight: 500;
+
+}
+
+/* media Query for responsive  */
+ @media (max-width:650px) {
+  
+  .weather{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .weather{
+    width: 430px;
+    height: 440px;
+    flex-direction: column;
+  }
+  
+input[type="text"]
+{
+  position: absolute;
+  top: 40px;
+    width: 120px;
+}
+
+.btn
+{
+  position: relative;
+  top: 40px;
+    width: 50px;
+    left: 120px;
+   
+}
+.weather .content{
+  width: 400px;
+}
+.weather .content .temp{
+  flex-wrap: wrap;
+}
+.weather .calender{
+  width: 430px;
+  display: flex;
+  flex-direction: row;
+}
+.content .inputBox{
+  font-size: 15px;
+}
+.calender .calenderImg{
+  width: 100%;
+  height: 100%;
+}
+.calender .calenderImg img{
+  width: 100%;
+  height: 100%;
+}
+.datetime{
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+}
+
+  
+
+} 
